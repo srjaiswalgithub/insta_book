@@ -25,7 +25,7 @@ const Signup = () => {
         e.preventDefault();
         try {
             setLoading(true);
-            const res = await axios.post('http://localhost:5500/api/v1/user/register', input, {
+            const res = await axios.post('https://insta-book-2.onrender.com/api/v1/user/register', input, {
                 headers: {
                     'Content-Type': 'application/json'
                 },

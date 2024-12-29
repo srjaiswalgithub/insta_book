@@ -30,7 +30,7 @@ const Profile = () => {
   //followUnfollow
   const followUnfollow = async () => {
     try {
-        const res = await axios.get(`http://localhost:5500/api/v1/user/followorunfollow/${userProfile._id}`, {withCredentials:true});
+        const res = await axios.get(`https://insta-book-2.onrender.com/api/v1/user/followorunfollow/${userProfile._id}`, {withCredentials:true});
         setIsFollowing(!isFollowing);
         if(res.data.success){
           

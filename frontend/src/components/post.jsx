@@ -43,7 +43,7 @@ const Post = ({ post }) => {
     const likeOrDislikeHandler = async () => {
         try {
             const action = liked ? 'dislike' : 'like';
-            const res = await axios.get(`http://localhost:5500/api/v1/post/${post._id}/${action}`, { withCredentials: true });
+            const res = await axios.get(`https://insta-book-2.onrender.com/api/v1/post/${post._id}/${action}`, { withCredentials: true });
             
             if (res.data.success) {
                 const updatedLikes = liked ? postLike - 1 : postLike + 1;
@@ -68,7 +68,7 @@ const Post = ({ post }) => {
     const commentHandler = async () => {
 
         try {
-            const res = await axios.post(`http://localhost:5500/api/v1/post/${post._id}/comment`, { text }, {
+            const res = await axios.post(`https://insta-book-2.onrender.com/api/v1/post/${post._id}/comment`, { text }, {
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -94,7 +94,7 @@ const Post = ({ post }) => {
 
     const deletePostHandler = async () => {
         try {
-            const res = await axios.delete(`http://localhost:5500/api/v1/post/delete/${post?._id}`, { withCredentials: true })
+            const res = await axios.delete(`https://insta-book-2.onrender.com/api/v1/post/delete/${post?._id}`, { withCredentials: true })
             if (res.data.success) {
                 const updatedPostData = posts.filter((postItem) => postItem?._id !== post?._id);
                 dispatch(setPosts(updatedPostData));
@@ -108,7 +108,7 @@ const Post = ({ post }) => {
 
     const bookmarkHandler = async () => {
         try {
-            const res = await axios.get(`http://localhost:5500/api/v1/post/${post?._id}/bookmark`, {withCredentials:true});
+            const res = await axios.get(`https://insta-book-2.onrender.com/api/v1/post/${post?._id}/bookmark`, {withCredentials:true});
             setBookmark(!bookmark);
             if(res?.data?.success){
                 dispatch(setUserProfile(res?.data?.user));
@@ -126,7 +126,7 @@ const Post = ({ post }) => {
     //followUnfollow
   const followUnfollow = async () => {
     try {
-        const res = await axios.get(`http://localhost:5500/api/v1/user/followorunfollow/${post.author._id}`, {withCredentials:true});
+        const res = await axios.get(`https://insta-book-2.onrender.com/api/v1/user/followorunfollow/${post.author._id}`, {withCredentials:true});
         setIsFollowing(!isFollowing);
         if(res.data.success){
           

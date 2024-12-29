@@ -57,7 +57,7 @@ function App() {
 
   useEffect(() => {
     if (user) {
-      const socketio = io('http://localhost:5500', {
+      const socketio = io('https://insta-book-2.onrender.com', {
         query: {
           userId: user?._id
         },

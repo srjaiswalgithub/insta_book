@@ -23,7 +23,7 @@ const SuggestedUsers = () => {
     //Unfollow
     const Unfollow = async (userId) => {
         try {
-            const res = await axios.get(`http://localhost:5500/api/v1/user/followorunfollow/${userId}`, {withCredentials:true});
+            const res = await axios.get(`https://insta-book-2.onrender.com/api/v1/user/followorunfollow/${userId}`, {withCredentials:true});
             if(res?.data?.success){
                 dispatch(setUserProfile(res?.data?.user));
                 toast.success(res?.data?.message);

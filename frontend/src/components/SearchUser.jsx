@@ -19,7 +19,7 @@ const SearchUser = ({searchOpen,setSearchOpen}) => {
 
         try {
             setLoading(true)
-            const res = await axios.post(`http://localhost:5500/api/v1/user/search-user`, { search }, {
+            const res = await axios.post(`https://insta-book-2.onrender.com/api/v1/user/search-user`, { search }, {
                 headers: {
                     'Content-Type': 'application/json'
                 },

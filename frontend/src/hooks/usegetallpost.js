@@ -9,7 +9,7 @@ const useGetAllPost = () => {
     useEffect(() => {
         const fetchAllPost = async () => {
             try {
-                const res = await axios.get('http://localhost:5500/api/v1/post/all', { withCredentials: true });
+                const res = await axios.get('https://insta-book-2.onrender.com/api/v1/post/all', { withCredentials: true });
                 if (res.data.success) { 
                    
                     dispatch(setPosts(res.data.posts));

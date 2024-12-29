@@ -9,7 +9,7 @@ const useGetSuggestedUsers = () => {
     useEffect(() => {
         const fetchSuggestedUsers = async () => {
             try {
-                const res = await axios.get('http://localhost:5500/api/v1/user/suggested', { withCredentials: true });
+                const res = await axios.get('https://insta-book-2.onrender.com/api/v1/user/suggested', { withCredentials: true });
                 if (res.data.success) { 
                     dispatch(setSuggestedUsers(res.data.users));
                 }

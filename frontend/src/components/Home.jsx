@@ -1,8 +1,8 @@
 import React from 'react'
-import Feed from './Feed'
+import Feed from './feed'
 import { Outlet } from 'react-router-dom'
-import RightSidebar from './RightSidebar'
-import useGetAllPost from '@/hooks/useGetAllPost'
+import RightSidebar from './Rightsidebar'
+import useGetAllPost from '@/hooks/usegetallpost'
 import useGetSuggestedUsers from '@/hooks/useGetSuggestedUsers'
 
 const Home = () => {

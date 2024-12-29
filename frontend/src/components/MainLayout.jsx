@@ -1,6 +1,6 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import LeftSidebar from './LeftSidebar'
+import LeftSidebar from './Leftsidebar'
 
 const MainLayout = () => {
   return (
